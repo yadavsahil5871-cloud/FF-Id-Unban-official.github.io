@@ -2,14 +2,20 @@
 <html>
 <head>
 <title>Free Fire ID Unban</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
+
 body{
 font-family: Arial;
-background:#f1f1f1;
+background: linear-gradient(to right,#6a11cb,#2575fc);
+margin:0;
+padding:0;
 }
 
 .container{
-width:350px;
+width:90%;
+max-width:400px;
 margin:30px auto;
 background:white;
 padding:20px;
@@ -26,17 +32,18 @@ label{
 font-weight:bold;
 }
 
-input, select{
+input,select{
 width:100%;
-padding:8px;
-margin:5px 0 10px 0;
-border:1px solid #ccc;
+padding:10px;
+margin-top:5px;
+margin-bottom:15px;
 border-radius:5px;
+border:1px solid gray;
 }
 
 button{
 width:100%;
-padding:10px;
+padding:12px;
 background:green;
 color:white;
 border:none;
@@ -44,70 +51,112 @@ border-radius:5px;
 font-size:16px;
 }
 
-#qr{
+button:hover{
+background:darkgreen;
+}
+
+#payment{
 display:none;
 text-align:center;
-margin-top:15px;
+}
+
+.paybox{
+background:white;
+padding:15px;
+border-radius:10px;
+box-shadow:0 0 10px gray;
 }
 
 </style>
+
+<script>
+
+function submitForm(){
+
+var uid=document.getElementById("uid").value;
+var nick=document.getElementById("nick").value;
+
+if(uid=="" || nick==""){
+alert("Please fill all details");
+return;
+}
+
+document.getElementById("form").style.display="none";
+document.getElementById("payment").style.display="block";
+
+}
+
+</script>
+
 </head>
 
 <body>
 
 <div class="container">
 
+<div id="form">
+
 <h2>Free Fire ID Unban</h2>
 
 <label>Account UID</label>
-<input placeholder="Enter your Free Fire UID">
+<input type="text" id="uid" placeholder="Enter your Free Fire UID">
 
 <label>Account Nickname</label>
-<input placeholder="Enter your Free Fire Nickname">
+<input type="text" id="nick" placeholder="Enter your Free Fire Nickname">
 
 <label>Your Device</label>
 <select>
-<option>Choose your Device</option>
+<option>Select your Device</option>
 <option>Android</option>
 <option>iPhone</option>
+<option>Emulator</option>
 </select>
 
-<label>Server / Region</label>
+<label>Server/Region</label>
 <select>
 <option>Select your Server</option>
 <option>India</option>
 <option>Singapore</option>
 <option>Brazil</option>
+<option>Indonesia</option>
 </select>
 
 <label>Reason for Ban</label>
 <select>
-<option>Select Reason</option>
-<option>Hack</option>
+<option>Select Reason for Ban</option>
+<option>Using Hacks</option>
+<option>Using Emulator</option>
 <option>Suspicious Activity</option>
-<option>Other</option>
+<option>Account Mistakenly Banned</option>
 </select>
 
 <label>ID Level</label>
-<input placeholder="Your Free Fire ID Level">
+<input type="text" placeholder="Enter your ID Level">
 
-<label>Upload Screenshot</label>
-<input type="file">
+<button onclick="submitForm()">Submit Request</button>
 
-<button onclick="showQR()">Proceed</button>
+</div>
 
-<div id="qr">
-<h3>Scan & Pay with Paytm</h3>
+
+<div id="payment">
+
+<div class="paybox">
+
+<h3>Garena Payment Gateway</h3>
+
+<p>Pay ₹99 to Process Unban Request</p>
+
 <img src="paytmqr.png" width="200">
-</div>
+
+<p>Scan & Pay with Paytm / UPI</p>
+
+<p style="color:green;">Payment Status: Pending</p>
 
 </div>
 
-<script>
-function showQR(){
-document.getElementById("qr").style.display="block";
-}
-</script>
+</div>
+
+</div>
 
 </body>
 </html>
