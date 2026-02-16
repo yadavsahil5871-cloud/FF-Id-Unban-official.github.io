@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Free Fire ID Unban</title>
+<style>
+body{
+font-family: Arial;
+background:#f1f1f1;
+}
+
+.container{
+width:350px;
+margin:30px auto;
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 0 10px gray;
+}
+
+h2{
+color:red;
+text-align:center;
+}
+
+label{
+font-weight:bold;
+}
+
+input, select{
+width:100%;
+padding:8px;
+margin:5px 0 10px 0;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+button{
+width:100%;
+padding:10px;
+background:green;
+color:white;
+border:none;
+border-radius:5px;
+font-size:16px;
+}
+
+#qr{
+display:none;
+text-align:center;
+margin-top:15px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Free Fire ID Unban</h2>
+
+<label>Account UID</label>
+<input placeholder="Enter your Free Fire UID">
+
+<label>Account Nickname</label>
+<input placeholder="Enter your Free Fire Nickname">
+
+<label>Your Device</label>
+<select>
+<option>Choose your Device</option>
+<option>Android</option>
+<option>iPhone</option>
+</select>
+
+<label>Server / Region</label>
+<select>
+<option>Select your Server</option>
+<option>India</option>
+<option>Singapore</option>
+<option>Brazil</option>
+</select>
+
+<label>Reason for Ban</label>
+<select>
+<option>Select Reason</option>
+<option>Hack</option>
+<option>Suspicious Activity</option>
+<option>Other</option>
+</select>
+
+<label>ID Level</label>
+<input placeholder="Your Free Fire ID Level">
+
+<label>Upload Screenshot</label>
+<input type="file">
+
+<button onclick="showQR()">Proceed</button>
+
+<div id="qr">
+<h3>Scan & Pay with Paytm</h3>
+<img src="paytmqr.png" width="200">
+</div>
+
+</div>
+
+<script>
+function showQR(){
+document.getElementById("qr").style.display="block";
+}
+</script>
+
+</body>
+</html>
